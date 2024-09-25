@@ -1,4 +1,4 @@
-# B0B36JUL
+# B4B01DMA
 CTU FEE Subject Discrete Mathematics
 
 - website: https://math.fel.cvut.cz/cz/lide/habala/teaching/dma.html
