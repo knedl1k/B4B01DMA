@@ -48,7 +48,7 @@ $square$
         $a, b in ZZ$ libovolné.\
         předpoklad: $a equiv b (mod p q)$.\
         $a - b = k p q$, $k in ZZ$.\
-        No ale to nutně znamená, že $a-b$ je dělitelné $p$ i $q$.\
+        $a - b = (k p)q$, $(k p) in ZZ space and space a - b = (k q)p$, $(k q) in ZZ$.\
         A tedy platí $a equiv b (mod p)$ a $a equiv b (mod q)$.
     ]
 ]
