@@ -29,7 +29,7 @@ Tento úkol vypracujte a pak přineste na cvičení č. 4.
       předpoklad: $a equiv b space (mod n)$.\
       $a-b = k n$, pro nějaké $k in ZZ$.\
       $13a-13b=13(a-b)$.\
-      dosadím: $13(a-b)=13(k n)=(13k)n$.\
+      dosadím: $13(a-b)=13(k n)=(13k)n$, $(13k) in ZZ$.\
       a tedy: $13a equiv 13b space (mod n)$.
 
 ]]
