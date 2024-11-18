@@ -108,7 +108,8 @@ Ukažte toto seřazení (tedy vlastně Hasseův diagram), pokud se množina $A$ 
         #proof[
           p-p:\
           $a=1, b=5, c=14$.\
-          $1 Rel 5 and 5 Rel 14$, ale neplatí $1=14$.
+          $1 Rel 5 and 5 Rel 14$, ale neplatí $1 Rel 14$, protože \
+          $1 equiv.not 14 (mod 2)$ ani $1 equiv.not 14 (mod 3)$.
         ]
       ]
 )
