@@ -91,29 +91,29 @@ Ukažte toto seřazení (tedy vlastně Hasseův diagram), pokud se množina $A$ 
   ]
 )
 \
-Antisymetrie: $forall a, b in ZZ : (a Rel b and b Rel a) ==> a = b $. Platí.\ 
-    Důkaz.
-    #proof[
-      $a, b in ZZ$ libovolné.\
-      předpoklad: $(a equiv b (mod 2) space or space a equiv b (mod 3)) space and space
-       (b equiv a (mod 2) space or space b equiv a (mod 3))"."$\
-      $a-b = -(b-a)$.\
-      $(a - b = 2k or a - b = 3l) and
-       (b - a = 2(-k) or b - a = 3(-l)) "," space k, l in ZZ "."$\
-       
-      $(a-b &= 2k &&and b-a = 2(-k)) &&or (a-b = 2k &&and b-a = 3(-l)) or \
-       (a - b &= 3l &&and b-a = 2(-k)) &&or (a - b = 3l &&and  b-a = 3(-l))"."$\
-       
-      $a-b=0 ==> a=b$.
-    ]
-Tranzitivita: $forall a, b, c in ZZ: (a Rel b and b Rel c) ==> a Rel c$. Neplatí.\
-    Důkaz.
-    #proof[
-      p-p:\
-      $a=1, b=5, c=14$.\
-      $1 Rel 5 and 5 Rel 14$, ale neplatí $1=14$.
-    ]
-\
+#grid(
+  columns: (1fr, 1fr),
+  align(left)[
+    Antisymetrie: $forall a, b in ZZ : (a Rel b and b Rel a) ==> a = b $. Neplatí.\ 
+        Důkaz.
+        #proof[
+          p-p:\
+          $a = 1, b=3$.\
+          $1 Rel 3 and 3 Rel 1$, ale neplatí $1 = 3$.
+        ]
+  ],
+  align(left)[
+    Tranzitivita: $forall a, b, c in ZZ: (a Rel b and b Rel c) ==> a Rel c$. Neplatí.\
+        Důkaz.
+        #proof[
+          p-p:\
+          $a=1, b=5, c=14$.\
+          $1 Rel 5 and 5 Rel 14$, ale neplatí $1=14$.
+        ]
+      ]
+)
+Aby relace byla částečně uspořádánou, musí být tranzitivní, reflexivní a antisymetrická. Tuto vlastnost $Rel$ nesplňuje.
+
 #grid(
   columns: (1fr, 1fr),
   align(left)[
