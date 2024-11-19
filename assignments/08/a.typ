@@ -46,11 +46,66 @@ Poznámka: Může pro vás být jednodušší to vidět jako $underbrace(0 + 0 +
 Nechť $Rel, cal(S)$ jsou relace na $A$. Dokažte: Je-li $Rel$ reflexivní, tak je i u $Rel union cal(S)$ reflexivní.
 \
 \
-*1.* Například $"DMA"Rel"DRN"$.\
-$bb(R): a Rel a, a in A. checkmark$\
-$bb(S): \ 
-  a, b in A "libovolné."\
-  "předpoklad:" a Rel b \
 
- ==> b Rel a, a,b in A. checkmark $\
-$bb(T):$\
+*1.* Například $"DMA"Rel"DRN"$.\
+
+
+a)
+
+Nechť $I(a)$ je první písmeno třípísmenné zkratky předmětu $a in A$.
+
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  align(left)[
+    $bb(R)$eflexivita:
+    #proof[
+    $ a Rel a, a in A.$\
+    $I(a) = I(a)$ platí vždy $==> a Rel a$.
+    ]
+  ],
+  align(left)[
+    $bb(S)$ymetrie:
+    #proof[
+      $a, b in A$ libovolné.\
+      předpoklad: $a Rel b$.\
+      $I(a) = I(b)$.\
+      a tedy $I(b) = I(a) ==> b Rel a$.
+    ]
+  ],
+  align(left)[
+    $bb(T)$ranzivita:
+    #proof[
+      $a, b, c in A$ libovolné.\
+      předpoklad: $(a Rel b) and (b Rel c)$.\
+      $I(a) = I(b) and I(b) = I(c)$.\
+      což znamená $I(a) = I(c)$.
+    ]
+  ],
+)
+Protože $Rel$ splňuje $bb(R)$eflexivitu, $bb(S)$ymetrii a $bb(T)$ranzivitu, $Rel$ je ekvivalence.
+
+b)
+
+Nechť $I(X)$ je první písmeno třípísmenné zkratky předmětu $X in A$.
+
+$["DMA12"]_Rel = \{X in A; "DMA12"space Rel space X\} = \{I(X) = D\}$.
+
+\
+*2.* \
+#proof[
+  $(0)$ $n = 1: 0 =^? 0 space checkmark$\
+  $(1)$ $n >= 1:
+        "indukční předpoklad:" sum_(k=1)^n 0 = 0$.\
+        Pak: $ sum_(k=1)^n (0) + 0(n+1) = 0n + 0n + 0 = 0 (2n + 1) = 0.$
+]
+
+#set math.vec(delim: "[")
+
+*Bonus.*\ 
+
+#proof[
+  předpoklad: $Rel$ je reflexivní.\
+  pak $vec((a,a) in Rel union cal(S))-> 
+       vec((a,a) in Rel space or space (a,a) in cal(S))
+      -->^"předp." Rel union cal(S)$.
+]
