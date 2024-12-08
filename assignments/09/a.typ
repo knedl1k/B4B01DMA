@@ -39,7 +39,7 @@ b) Dokažte indukcí, že váš odnadnutý vzorec je správně.
 
 *2.* Uvažujte funkci zadanou $f(1)=0$ a $f(n+1)=f(n) + n$ pro $n in NN$.
 
-Dokažte indukcí, že takto zadaná funkce splňuje nerovnost $f(n) < n^2$ pro $n in NN$.
+Dokažte indukcí, že takto zadaná funkce splňuje nerovnost $f(n) <= n^2$ pro $n in NN$.
 
 *Bonus:*\
 Nechť $cal(R)$ je relace na $A$. Dokažte:\
@@ -54,18 +54,16 @@ a) $f(2)=2+2=4, f(3)=4+2 dot 2=8, f(4) = 8 + 2 dot 4=16, f(5)=16 + 2 dot 8 = 32$
 $ f(n) = 2^n, n in NN $
 b)
 #proof[
-  (0) $n$=$0$: $2^0 = f(0) = 1$.\
-  (1) $n >= 0$: IP: $f(n)=2^n, f(n-1)=2^(n-1)$.\
+  (0) $n=1$: $2^1 = 2 = f(1)$.\
+  (1) $n >= 1$: IP: $f(n)=2^n, f(n-1)=2^(n-1)$.\
   Pak $f(n+1) = f(n) + 2f(n-1) =^("IP") 2^n + 2 dot 2^(n-1) = 2 dot 2^n = 2^(n+1) $.
 ]
 \
 *2.*\
-$f(2)=0+1=1, f(3)=1+2=3, f(4)=3+3=6, f(5)=6+4=10, f(6)=10+5=15$\
-$ f(n) = ((n-1) n)/2, n >= 1 $
 #proof[
-  (0) $n$=$1$: $f(1)=((1-1) dot 1)/2 = 0 < 1^2$.\
-  (1) $n >= 1$: IP: $f(n)=((n-1) n)/2$.\
-  Pak $f(n+1) < n^2 + 2n +1 =^("IP") (n^2 +n)/2 < n^2 + 2n +1 -> 0 < n^2 + 3n +2$. 
+  (0) $n=1$: $f(1)=((1-1) dot 1)/2 = 0 <= 1^2$.\
+  (1) $n >= 1$: IP: $f(n) <= n^2$.\
+  Pak $f(n+1) = f(n) +n <=^("IP") n^2 +n <=_([n+1 >= 0]) n^2 +2n +1 <= (n+1)^2$. 
 ]
 \
 *Bonus.*\
