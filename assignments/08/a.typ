@@ -91,21 +91,26 @@ Nechť $I(X)$ je první písmeno třípísmenné zkratky předmětu $X in A$.
 $["DMA12"]_Rel = \{X in A; "DMA12"space Rel space X\} = \{I(X) = D\}$.
 
 \
-*2.* \
-#proof[
-  $(0)$ $n = 1: 0 =^? 0 space checkmark$\
-  $(1)$ $n >= 1:
-        "indukční předpoklad:" sum_(k=1)^n 0 = 0$.\
-        Pak: $ sum_(k=1)^n (0) + 0(n+1) = 0n + 0n + 0 = 0 (2n + 1) = 0.$
-]
 
-#set math.vec(delim: "[")
+#grid(
+  columns: (1fr, 1fr),
+  align(left)[
+    *2.* \
+    #proof[
+      $(0)$ $n = 1: 0 =^? 0 space checkmark$\
+      $(1)$ $n >= 1:
+            "indukční předpoklad:" sum_(k=1)^n 0 = 0$.\
+            Pak: $ sum_(k=1)^(n+1) (0) = sum_(k=1)^(n)(0) + 0=^("IP") 0 + 0 = 0$.\
+    ]
+  ],
+  align(left)[
+    #set math.vec(delim: "[")
 
-*Bonus.*\ 
+    *Bonus.*\ 
 
-#proof[
-  předpoklad: $Rel$ je reflexivní.\
-  pak $vec((a,a) in Rel union cal(S))-> 
-       vec((a,a) in Rel space or space (a,a) in cal(S))
-      -->^"předp." Rel union cal(S)$.
-]
+    #proof[
+      předpoklad: $Rel$ je reflexivní.\
+      pak $vec((a,a) in Rel space or space (a,a) in cal(S)) --> vec((a,a) in Rel union cal(S)) --> Rel union cal(S)$.
+    ]
+  ],
+)
